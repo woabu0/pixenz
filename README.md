@@ -72,6 +72,7 @@ Welcome to the **Pikzo** project! This README provides an overview of the projec
 server
 ├── src/
 │   ├── index.ts
+│   ├── server.ts
 │   ├── routes/
 │   │   └──
 │   ├── controllers/
