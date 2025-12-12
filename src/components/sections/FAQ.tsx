@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import SectionContainer from "@/components/ui/SectionContainer";
-import Card from "@/components/ui/Card";
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -43,13 +42,12 @@ export default function FAQ() {
   ];
 
   return (
-    <SectionContainer id="faq" className="bg-[#111317]">
+    <SectionContainer id="faq" className="bg-background">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
           <h2 
-            className="text-[clamp(2.5rem,6vw,3.75rem)] font-bold text-white mb-4 sm:mb-6"
-            style={{ fontSize: "clamp(2.5rem, 6vw, 3.75rem)" }}
+            className="text-[clamp(2.5rem,6vw,3.75rem)] font-bold text-white mb-4 sm:mb-6 font-playfair"
           >
             Frequently Asked Questions
           </h2>
@@ -59,30 +57,30 @@ export default function FAQ() {
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-3 sm:space-y-4">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
               className="animate-fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <Card className="p-0 overflow-hidden">
+              <div className="glass-card rounded-2xl overflow-hidden hover:bg-white/[0.08] transition-colors border border-white/5">
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-soft-purple/50 focus:ring-offset-2 focus:ring-offset-[#15171C] rounded-t-2xl"
+                  className="w-full px-6 py-5 text-left flex items-center justify-between focus:outline-none"
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <h3 className="font-semibold text-white text-base sm:text-lg pr-4">
+                  <h3 className="font-semibold text-white text-lg pr-4">
                     {faq.question}
                   </h3>
                   <div
-                    className={`flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#0C0D10] border border-white/6 flex items-center justify-center text-soft-purple transition-transform duration-300 ${
-                      openIndex === index ? "rotate-180" : ""
+                    className={`flex-shrink-0 w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-primary transition-transform duration-300 ${
+                      openIndex === index ? "rotate-180 bg-white/10" : ""
                     }`}
                   >
                     <svg
-                      className="w-4 h-4 sm:w-5 sm:h-5"
+                      className="w-5 h-5"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -104,25 +102,25 @@ export default function FAQ() {
                     openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-4 sm:px-6 pb-4 sm:pb-5 pt-2 border-t border-white/6">
-                    <p className="text-sm sm:text-base text-white/70 leading-relaxed">
+                  <div className="px-6 pb-6 pt-0">
+                    <p className="text-base text-white/60 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
                 </div>
-              </Card>
+              </div>
             </div>
           ))}
         </div>
 
         {/* Help Text */}
-        <div className="text-center mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/6 animate-fade-in">
-          <p className="text-white/50 text-xs sm:text-sm mb-3 sm:mb-4">
+        <div className="text-center mt-12 pt-8 animate-fade-in">
+          <p className="text-white/50 text-sm mb-4">
             Still have questions?
           </p>
           <a
             href="#contact"
-            className="text-soft-purple hover:text-soft-purple/80 transition-colors font-medium text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-soft-purple/50 focus:ring-offset-2 focus:ring-offset-[#111317] rounded"
+            className="text-primary hover:text-white transition-colors font-medium text-base underline decoration-primary/30 hover:decoration-white/50 underline-offset-4"
           >
             Contact our support team →
           </a>

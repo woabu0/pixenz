@@ -21,14 +21,19 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://pikzo0.vercel.app"),
   title: {
-    default: "Pixenz - Connect. Share. Inspire.",
+    default: "Pixenz - Social Media Platform for Creators",
     template: "%s | Pixenz",
   },
-  description: "Pixenz is a modern social media platform where creativity meets community. Share photos, videos, and moments that matter, while discovering inspiring content from creators around the world.",
-  keywords: ["social media", "social platform", "creators", "community", "share", "connect", "inspire"],
+  description: "Pixenz is a next-generation social media platform built for creators. Connect with your community, share your story in high fidelity, and monetize your passion.",
+  keywords: ["social media", "social platform", "creators", "content creators", "social network", "community", "share", "connect", "monetize", "creative platform"],
   authors: [{ name: "Pixenz" }],
   creator: "Pixenz",
   publisher: "Pixenz",
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+    ],
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -38,14 +43,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://pikzo0.vercel.app",
-    title: "Pixenz - Connect. Share. Inspire.",
-    description: "The next-generation social platform where creativity meets community.",
+    title: "Pixenz - Social Media Platform for Creators",
+    description: "A next-generation social media platform built for creators. Connect with your community, share your story in high fidelity, and monetize your passion.",
     siteName: "Pixenz",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pixenz - Connect. Share. Inspire.",
-    description: "The next-generation social platform where creativity meets community.",
+    title: "Pixenz - Social Media Platform for Creators",
+    description: "A next-generation social media platform built for creators. Connect with your community, share your story in high fidelity, and monetize your passion.",
     creator: "@pixenz",
   },
   robots: {
@@ -74,10 +79,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
       <body
         className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
       >

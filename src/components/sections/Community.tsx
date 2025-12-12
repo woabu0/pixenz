@@ -37,58 +37,51 @@ const testimonials = [
 
 export default function Community() {
   return (
-    <SectionContainer id="community" className="bg-[#111317]">
-      <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+    <SectionContainer id="community" className="bg-background relative">
+       {/* Background */}
+       <div className="absolute bottom-0 left-0 w-full h-[500px] bg-gradient-to-t from-secondary/5 to-transparent pointer-events-none"></div>
+
+      <div className="text-center mb-16 sm:mb-24 animate-fade-in relative z-10">
+        <span className="text-accent text-sm font-bold tracking-widest uppercase mb-4 block">Community</span>
         <h2 
-          className="text-[clamp(2.5rem,6vw,4.5rem)] font-bold mb-4 sm:mb-6 text-white"
-          style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}
+          className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold mb-6 font-playfair text-white"
         >
-          Our Community
+          Loved by <span className="text-gradient">millions.</span>
         </h2>
-        <p className="text-base sm:text-lg lg:text-xl text-white/60 max-w-[550px] mx-auto px-4">
-          Join thousands of creators, artists, and everyday users who are building meaningful connections on Pixenz.
+        <p className="text-lg sm:text-xl text-white/60 max-w-[600px] mx-auto px-4">
+          Join the fastest growing social platform for creators.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto relative z-10">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
             className="animate-fade-in-up"
             style={{ animationDelay: `${index * 0.1}s` }}
           >
-            <Card>
-              <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <Card className="h-full hover:bg-white/5">
+              <div className="flex items-center gap-4 mb-6">
                 <div className="relative flex-shrink-0">
                   <div
-                    className="absolute inset-0 rounded-full"
-                    style={{
-                      background: `radial-gradient(circle, ${testimonial.color}30, transparent)`,
-                      padding: "2px",
-                    }}
-                    aria-hidden="true"
-                  >
-                    <div className="w-full h-full rounded-full bg-[#15171C]"></div>
-                  </div>
+                    className="absolute -inset-1 rounded-full blur-sm opacity-50"
+                    style={{ background: testimonial.color }}
+                  ></div>
                   <Image
                     src={testimonial.image}
                     alt={`${testimonial.name}, ${testimonial.role}`}
-                    width={48}
-                    height={48}
-                    className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
-                    style={{
-                      border: `2px solid ${testimonial.color}40`,
-                    }}
+                    width={56}
+                    height={56}
+                    className="relative w-14 h-14 rounded-full object-cover border-2 border-background"
                     loading="lazy"
-                    decoding="async"
                   />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-white text-sm sm:text-base">{testimonial.name}</h4>
-                  <p className="text-xs sm:text-sm text-white/50">{testimonial.role}</p>
+                  <h4 className="font-bold text-white text-lg">{testimonial.name}</h4>
+                  <p className="text-sm font-medium" style={{ color: testimonial.color }}>{testimonial.role}</p>
                 </div>
               </div>
-              <blockquote className="text-sm sm:text-base text-white/70 leading-relaxed italic">
+              <blockquote className="text-lg text-white/80 leading-relaxed font-medium">
                 &ldquo;{testimonial.text}&rdquo;
               </blockquote>
             </Card>

@@ -11,8 +11,8 @@ interface CardProps {
 export default function Card({ children, className = "", hover = true }: CardProps) {
   return (
     <div
-      className={`bg-[#15171C] border border-white/8 rounded-2xl p-4 sm:p-6 transition-all duration-300 gpu-accelerated ${
-        hover ? "hover:-translate-y-1 hover:shadow-lg" : ""
+      className={`glass-card rounded-3xl p-6 sm:p-8 transition-all duration-300 gpu-accelerated ${
+        hover ? "hover:border-white/20 hover:shadow-2xl hover:-translate-y-1" : ""
       } ${className}`}
     >
       {children}

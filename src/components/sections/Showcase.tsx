@@ -7,44 +7,43 @@ const showcaseItems = [
   {
     title: "Beautiful Home Feed",
     description: "Discover content tailored to your interests with our intelligent feed algorithm. See what matters most to you, when it matters.",
-    image: "https://picsum.photos/400/800?random=10",
+    image: "/images/feed.png",
   },
   {
     title: "Seamless Messaging",
     description: "Connect with friends through our elegant messaging interface. Share moments, reactions, and conversations effortlessly.",
-    image: "https://picsum.photos/400/800?random=11",
+    image: "/images/messaging.png",
   },
   {
     title: "Creative Profiles",
     description: "Showcase your work with customizable profiles. Express yourself through beautiful layouts and curated content.",
-    image: "https://picsum.photos/400/800?random=12",
+    image: "/images/profile.png",
   },
   {
     title: "Explore & Discover",
     description: "Find new creators, communities, and content that inspire you. Our discovery engine helps you connect with what you love.",
-    image: "https://picsum.photos/400/800?random=13",
+    image: "/images/explore.png",
   },
 ];
 
 export default function Showcase() {
   return (
-    <SectionContainer id="showcase" className="bg-[#0C0D10] relative">
-      {/* Vertical center line */}
-      <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-[#8F8AD6]/20 pointer-events-none" aria-hidden="true"></div>
-
-      <div className="text-center mb-12 sm:mb-16 md:mb-20 animate-fade-in">
+    <SectionContainer id="showcase" className="bg-background relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-1/4 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+      
+      <div className="text-center mb-20 sm:mb-28 animate-fade-in relative z-10">
         <h2 
-          className="text-[clamp(2.5rem,6vw,4.5rem)] font-bold mb-4 sm:mb-6 text-white"
-          style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}
+          className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold mb-6 font-playfair text-white"
         >
-          Experience Pixenz
+          Designed for <span className="text-gradient-purple">immersion.</span>
         </h2>
-        <p className="text-base sm:text-lg lg:text-xl text-white/60 max-w-2xl mx-auto px-4">
-          A beautifully designed interface that puts your content first
+        <p className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto px-4">
+          Every interaction feels natural, fluid, and delightful.
         </p>
       </div>
 
-      <div className="space-y-0">
+      <div className="space-y-12 sm:space-y-24 relative z-10">
         {showcaseItems.map((item, index) => (
           <TimelineItem
             key={index}

@@ -1,6 +1,6 @@
-# Pixenz - Portfolio Website
+# Pixenz - Landing Page
 
-Welcome to the **Pixenz** project! This README provides an overview of the project, setup instructions, and other relevant details.
+Welcome to the **Pixenz** landing page project! This is a premium, high-performance landing page for the Pixenz social media mobile application. This README provides an overview of the project, setup instructions, and other relevant details.
 
 ## Table of Contents
 
@@ -9,27 +9,29 @@ Welcome to the **Pixenz** project! This README provides an overview of the proje
 - [Features](#features)
 - [Installation](#installation)
 - [Structure](#structure)
-- [Structure](#structure)
 - [Contributors](#contributors)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Visit
 
-- [Vercel](https://Pixenz0.vercel.app/)
+- [Vercel](https://pixenz0.vercel.app/)
 
 ## About
 
-**Pixenz** is a digital agency offering creative design and modern development services. We craft user-centric experiences, powerful interfaces, and innovative solutions for your brand.
+**Pixenz** is a next-generation social media platform built for creators. Connect with your community, share your story in high fidelity, and monetize your passion. Experience a modern, premium social network designed to inspire meaningful connections and empower creative expression.
 
 ## Features
 
-- Home
-- Expertise
-- Case
-- Questions
-- Feedback
-- Contact
+- Hero Section
+- Features Section
+- Showcase Section
+- Community Section
+- Highlight Section
+- Download Section
+- FAQ Section
+- Contact Section
+- Responsive Design
 
 ## Installation
 
@@ -43,7 +45,7 @@ Welcome to the **Pixenz** project! This README provides an overview of the proje
    ```
 3. Install dependencies:
    ```bash
-   npm i
+   npm install
    ```
 4. Start the application:
    ```bash
@@ -51,7 +53,7 @@ Welcome to the **Pixenz** project! This README provides an overview of the proje
    ```
 5. Open your browser and navigate to:
    ```
-   http://localhost:5173
+   http://localhost:3000
    ```
 
 ## Structure
@@ -60,36 +62,44 @@ Welcome to the **Pixenz** project! This README provides an overview of the proje
 pixenz/
 ├── src/
 │   ├── app/
-│   │   ├── globals.css          # Global styles with animations
-│   │   ├── layout.tsx           # Root layout
-│   │   └── page.tsx             # Main page with all sections
+│   │   ├── favicon.ico         # Site favicon
+│   │   ├── icon.png            # App icon
+│   │   ├── globals.css         # Global styles with animations
+│   │   ├── layout.tsx          # Root layout with metadata
+│   │   └── page.tsx            # Main page with all sections
 │   └── components/
 │       ├── sections/
-│       │   ├── Hero.tsx         # Editorial split layout hero
-│       │   ├── Features.tsx     # Soft grid of depth cards
-│       │   ├── Showcase.tsx     # Vertical story flow
-│       │   ├── Community.tsx    # Human & social testimonials
-│       │   ├── Highlight.tsx   # One clean bold statement
-│       │   ├── Download.tsx     # Soft minimal CTA card
-│       │   ├── FAQ.tsx          # Accordion FAQ section
-│       │   ├── Contact.tsx      # Contact form & support info
-│       │   └── Footer.tsx       # Ultra minimal footer
+│       │   ├── Hero.tsx        # Full-screen hero section
+│       │   ├── Features.tsx    # Feature cards grid
+│       │   ├── Showcase.tsx    # Vertical story flow
+│       │   ├── Community.tsx   # Testimonials section
+│       │   ├── Highlight.tsx   # Bold statement section
+│       │   ├── Download.tsx    # CTA download section
+│       │   ├── FAQ.tsx         # Accordion FAQ section
+│       │   ├── Contact.tsx     # Contact form & info
+│       │   └── Footer.tsx      # Multi-column footer
 │       └── ui/
 │           ├── Button.tsx       # Reusable button component
-│           ├── Card.tsx          # Soft dark card component
-│           ├── Navbar.tsx        # Minimal floating navbar
-│           ├── PhoneMockup.tsx   # Phone frame component
+│           ├── Card.tsx         # Soft dark card component
+│           ├── Navbar.tsx       # Minimal floating navbar
+│           ├── PhoneMockup.tsx # Phone frame component
 │           ├── SectionContainer.tsx # Section wrapper
-│           ├── TimelineItem.tsx  # Timeline item component
-│           └── Icons.tsx         # SVG icon components
-├── public/                      # Static assets (empty)
-├── package.json                 # Dependencies
+│           ├── TimelineItem.tsx # Timeline item component
+│           └── Icons.tsx        # SVG icon components
+├── public/
+│   ├── images/                 # App screenshots
+│   │   ├── explore.png
+│   │   ├── feed.png
+│   │   ├── messaging.png
+│   │   └── profile.png
+│   └── logo.png                # Brand logo
+├── package.json                # Dependencies
 ├── package-lock.json           # Dependency lock file
 ├── next.config.ts              # Next.js configuration
 ├── next-env.d.ts               # Next.js TypeScript declarations
 ├── tsconfig.json               # TypeScript configuration
-├── postcss.config.mjs         # PostCSS configuration
-├── eslint.config.mjs          # ESLint configuration
+├── postcss.config.mjs          # PostCSS configuration
+├── eslint.config.mjs           # ESLint configuration
 ├── LICENSE                     # MIT License
 └── README.md                   # Project documentation
 ```
@@ -97,8 +107,8 @@ pixenz/
 ## Contributors
 
 <p align="center">
-  <a href="https://github.com/imabu0/pixenz/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=imabu0/pixenz" alt="Contributors" />
+  <a href="https://github.com/woabu0/pixenz/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=woabu0/pixenz" alt="Contributors" />
   </a>
 </p>
 
